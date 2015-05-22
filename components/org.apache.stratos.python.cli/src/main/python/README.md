@@ -18,7 +18,7 @@ instead `install` if developing
 To start the Python CLI issue, 
 
 ```
-$ stratos
+$ stratos-cli
 ```
  
  
