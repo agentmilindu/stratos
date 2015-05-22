@@ -8,12 +8,13 @@ class CLI(Cmd):
     """Apache Stratos CLI"""
 
     prompt = Configs.stratos_prompt
+
     # resolving the '-' issue
     Cmd.legalChars += '-'
     Cmd.shortcuts.update({'deploy-user': 'deploy_user'})
 
     def completenames(self, text, *ignored):
-        return [a[3:].replace('_','-') for a in self.get_names() if a.replace('_','-').startswith('do-'+text)]
+        return [a[3:].replace('_', '-') for a in self.get_names() if a.replace('_', '-').startswith('do-'+text)]
 
 
     @options([
